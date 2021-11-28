@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/react-od-test/static/css/main.a716ae31.chunk.css",
+    "main.js": "/react-od-test/static/js/main.e8b6d399.chunk.js",
+    "main.js.map": "/react-od-test/static/js/main.e8b6d399.chunk.js.map",
+    "runtime-main.js": "/react-od-test/static/js/runtime-main.d86f99c1.js",
+    "runtime-main.js.map": "/react-od-test/static/js/runtime-main.d86f99c1.js.map",
+    "static/js/2.0a491318.chunk.js": "/react-od-test/static/js/2.0a491318.chunk.js",
+    "static/js/2.0a491318.chunk.js.map": "/react-od-test/static/js/2.0a491318.chunk.js.map",
+    "static/js/3.e87fab8a.chunk.js": "/react-od-test/static/js/3.e87fab8a.chunk.js",
+    "static/js/3.e87fab8a.chunk.js.map": "/react-od-test/static/js/3.e87fab8a.chunk.js.map",
+    "index.html": "/react-od-test/index.html",
+    "static/css/main.a716ae31.chunk.css.map": "/react-od-test/static/css/main.a716ae31.chunk.css.map",
+    "static/js/2.0a491318.chunk.js.LICENSE.txt": "/react-od-test/static/js/2.0a491318.chunk.js.LICENSE.txt",
+    "static/media/App.scss": "/react-od-test/static/media/LabGrotesque-Regular.f45d8fdb.woff2",
+    "static/media/MyCheckbox.module.scss": "/react-od-test/static/media/checkbox_mark.62a8ceae.svg",
+    "static/media/MyModal.module.scss": "/react-od-test/static/media/closer.beb7d290.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d86f99c1.js",
+    "static/js/2.0a491318.chunk.js",
+    "static/css/main.a716ae31.chunk.css",
+    "static/js/main.e8b6d399.chunk.js"
+  ]
+}
