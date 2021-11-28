@@ -1,0 +1,62 @@
+@import "../../../styles/variables.scss";
+
+.MyInput {
+  width: 100%;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+  color: $c-black;
+  padding: 7px 10px;
+  border: 1px solid $c-light-grey;
+  border-radius: 3px;
+  transition: border 0.338s, color 0.338s;
+  font-family: $f-lab-grotesque;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+
+  &:hover {
+    border-color: $c-black;
+  }
+  &:focus {
+    border-color: $c-black;
+    outline: none;
+  }
+  &:disabled {
+    border-color: $c-dark-grey;
+    color: $c-dark-grey;
+  }
+  &--error {
+    border-color: $c-red;
+  }
+
+  &-wrapper {
+    position: relative;
+  }
+
+  &-suffix {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    padding: 7px 10px;
+    pointer-events: none;
+    color: transparent;
+    font-size: 14px;
+    line-height: 24px;
+    font-family: $f-lab-grotesque;
+    font-weight: 500;
+    &:after {
+      content: "₽";
+      display: block;
+      position: absolute;
+      right: -5px;
+      top: 8px;
+      color: $c-black;
+    }
+  }
+}

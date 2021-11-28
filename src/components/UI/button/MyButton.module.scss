@@ -1,0 +1,64 @@
+@import "../../../styles/variables.scss";
+
+.btn {
+  cursor: pointer;
+  border-radius: 6px;
+  font-family: $f-lab-grotesque;
+  font-style: normal;
+  font-weight: 500;
+  transition: color 0.338s, background-color 0.338s, border-color 0.338s,
+    box-shadow 0.338s;
+  border: none;
+  font-size: 12px;
+  line-height: 16px;
+  padding: 12px 24px;
+
+  @media screen and (min-width: 768px) {
+    font-size: 16px;
+    line-height: 24px;
+    padding: 15px 32px;
+  }
+
+  &--red {
+    color: white;
+    background: linear-gradient(
+        255.35deg,
+        $c-dark-red 0.83%,
+        rgba(255, 79, 79, 0) 108.93%
+      ),
+      $c-light-red;
+    box-shadow: 0px 0px 24px rgba(234, 0, 41, 0.33);
+    &:hover,
+    &:active {
+      color: white;
+      background: linear-gradient(
+          255.35deg,
+          $c-red 0.83%,
+          rgba(255, 79, 79, 0) 108.93%
+        ),
+        $c-red;
+    }
+  }
+  &--white {
+    color: $c-white;
+    background: transparent;
+    border: 1px solid $c-white;
+    &:hover,
+    &:active {
+      color: black;
+      background-color: $c-white;
+    }
+  }
+
+  &--wide {
+    width: 100%;
+  }
+
+  &:disabled {
+    pointer-events: none;
+    color: $c-white;
+    background: $c-grey-disabled;
+    border-color: $c-grey-disabled;
+    box-shadow: none;
+  }
+}

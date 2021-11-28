@@ -1,0 +1,82 @@
+@import "../../../styles/variables.scss";
+
+.MyModal {
+  $modal: &;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  overflow-y: scroll;
+  background-color: rgba($c-black, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s, visibility 0.3s;
+  &.active {
+    visibility: visible;
+    opacity: 1;
+
+    #{$modal}__content {
+      visibility: visible;
+      opacity: 1;
+      transform: translateY(0) skew(0turn, 0);
+    }
+  }
+  @media screen and (min-width: $screen-tablet) {
+    padding: 20px 30px;
+  }
+  &__content {
+    background-color: $c-white;
+    padding: 32px 16px 16px;
+    width: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(30px) skew(-0.001turn, 1deg);
+    transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
+    position: relative;
+    min-height: 100vh;
+    margin: auto;
+    @media screen and (min-width: $screen-tablet) {
+      border-radius: 30px;
+      padding: 32px;
+      min-height: unset;
+      margin: auto;
+      position: relative;
+      max-width: 453px;
+      overflow-y: visible;
+    }
+    @media screen and (min-width: $screen-desktop) {
+      max-width: 552px;
+    }
+  }
+
+  &__closer {
+    position: absolute;
+    right: 22px;
+    top: 22px;
+    width: 12px;
+    height: 12px;
+    background-image: url("/assets/images/closer.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    cursor: pointer;
+    transition: transform 150s ease;
+    &:hover {
+      transform: rotate(100000deg);
+    }
+    @media screen and (min-width: $screen-tablet) {
+      top: 27px;
+      right: 23px;
+      width: 18px;
+      height: 18px;
+    }
+    @media screen and (min-width: $screen-desktop) {
+      right: 27px;
+    }
+  }
+}

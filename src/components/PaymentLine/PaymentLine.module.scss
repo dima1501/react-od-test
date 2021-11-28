@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+
+.PaymentLine {
+  display: flex;
+  align-items: center;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid $c-light-grey;
+  &__checkbox {
+    margin-right: 12px;
+  }
+  &__descr {
+    font-size: 14px;
+    line-height: 24px;
+    font-family: $f-lab-grotesque;
+    color: $c-black;
+    font-weight: 500;
+    span {
+      color: $c-dark-grey;
+      font-weight: 300;
+    }
+  }
+}

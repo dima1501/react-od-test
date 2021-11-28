@@ -1,23 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.scss";
+import TaxForm from "./components/TaxForm/TaxForm";
+import MyButton from "./components/UI/button/MyButton";
+import MyModal from "./components/UI/modal/MyModal";
 
 function App() {
+  const [modal, setModal] = useState(false);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <MyButton theme="white" onClick={() => setModal(true)}>
+        Налоговый вычет
+      </MyButton>
+      <MyModal visible={modal} setVisible={setModal}>
+        <TaxForm setModal={setModal} />
+      </MyModal>
     </div>
   );
 }

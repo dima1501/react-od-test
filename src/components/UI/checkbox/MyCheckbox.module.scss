@@ -1,0 +1,53 @@
+@import "../../../styles/variables.scss";
+
+.MyCheckbox {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  &__input {
+    position: absolute;
+    visibility: hidden;
+    &:checked {
+      & + label {
+        border: none;
+        background: linear-gradient(
+            255.35deg,
+            $c-dark-red 0.83%,
+            rgba(255, 79, 79, 0) 108.93%
+          ),
+          $c-light-red;
+      }
+    }
+    &:disabled {
+      & + label {
+        background: $c-grey-disabled;
+        border: none;
+      }
+    }
+  }
+  &__label {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    border: 1px solid $c-light-grey;
+    border-radius: 6px;
+    cursor: pointer;
+    background: $c-white;
+    transition: background 0.3s, border 0.3s;
+    &:hover {
+      border-color: black;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      background: url("/assets/images/checkbox_mark.svg") no-repeat center
+        center;
+    }
+  }
+}

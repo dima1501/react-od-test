@@ -1,0 +1,107 @@
+@import "../../styles/variables.scss";
+
+.TaxForm {
+  padding-bottom: 58px;
+  @media screen and (min-width: $screen-tablet) {
+    padding-bottom: 0;
+  }
+  &__title {
+    font-family: $f-lab-grotesque;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+    color: $c-black;
+    margin-bottom: 16px;
+    @media screen and (min-width: $screen-tablet) {
+      font-size: 28px;
+      line-height: 40px;
+    }
+  }
+  &__note {
+    font-family: $f-lab-grotesque;
+    color: $c-dark-grey;
+    font-weight: 300;
+    font-size: 12px;
+    line-height: 16px;
+    margin-bottom: 24px;
+    @media screen and (min-width: $screen-tablet) {
+      font-size: 14px;
+      line-height: 24px;
+    }
+  }
+  &__line {
+    margin-bottom: 24px;
+    @media screen and (min-width: $screen-tablet) {
+      margin-bottom: 16px;
+    }
+    &-row {
+      @media screen and (min-width: $screen-tablet) {
+        display: flex;
+        align-items: center;
+      }
+    }
+    &-label {
+      display: block;
+      font-family: $f-lab-grotesque;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: $c-black;
+      font-family: $f-lab-grotesque;
+      margin: 7px 0;
+      &--inline {
+        margin-right: 32px;
+      }
+    }
+    &-link {
+      font-family: $f-lab-grotesque;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 24px;
+      color: $c-red;
+      margin: 9px 0;
+      cursor: pointer;
+      transition: color 0.3s;
+      &:hover {
+        color: $c-orange;
+      }
+    }
+    &-error {
+      font-family: $f-lab-grotesque;
+      color: $c-red;
+      font-size: 10px;
+      line-height: 12px;
+      font-weight: 300;
+      margin-top: 4px;
+    }
+  }
+  &__payments {
+    margin-bottom: 20px;
+  }
+  &__checker {
+    display: flex;
+    margin: 24px 0;
+    @media screen and (min-width: $screen-tablet) {
+      margin: 0;
+    }
+    &-item {
+      margin-right: 8px;
+      &:last-child {
+        margin-right: 0;
+      }
+      @media screen and (min-width: $screen-tablet) {
+        margin-right: 16px;
+      }
+    }
+  }
+  &__bottom {
+    position: absolute;
+    left: 16px;
+    bottom: 16px;
+    right: 16px;
+    @media screen and (min-width: $screen-tablet) {
+      margin-top: 40px;
+      position: static;
+    }
+  }
+}
