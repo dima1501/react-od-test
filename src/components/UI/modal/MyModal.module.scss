@@ -39,6 +39,7 @@
     transition: transform 0.3s, opacity 0.3s, visibility 0.3s;
     position: relative;
     min-height: 100vh;
+    min-height: -webkit-fill-available;
     margin: auto;
     @media screen and (min-width: $screen-tablet) {
       border-radius: 30px;

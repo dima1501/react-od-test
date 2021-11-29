@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.scss";
 import TaxForm from "./components/TaxForm/TaxForm";
 import MyButton from "./components/UI/button/MyButton";
 import MyModal from "./components/UI/modal/MyModal";

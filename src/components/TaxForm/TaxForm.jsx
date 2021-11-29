@@ -29,7 +29,7 @@ const TaxForm = ({ setModal }) => {
         { length: paymentsCount > 200 ? 200 : paymentsCount },
         (x, i) => {
           return {
-            id: `payment_line_${i}`,
+            id: Math.random().toString(36).substr(2, 10),
             value: i + 1 !== paymentsCount ? maxYearValue : lastPayment,
             checked: false,
           };
@@ -62,9 +62,9 @@ const TaxForm = ({ setModal }) => {
     setModal(false);
   };
 
-  const handleSalaryChange = (e) => {
-    const value = e.target.value;
-    const valid = e.target.validity.valid;
+  const handleSalaryChange = (event) => {
+    const value = event.target.value;
+    const valid = event.target.validity.valid;
 
     setSalary(value);
 
@@ -92,7 +92,7 @@ const TaxForm = ({ setModal }) => {
           <MyInput
             name="salary"
             value={salary}
-            onChange={(e) => handleSalaryChange(e)}
+            onChange={handleSalaryChange}
             type="number"
             placeholder="Заполните поле"
             suffix="₽"
@@ -164,7 +164,6 @@ const TaxForm = ({ setModal }) => {
             disabled={error}
             theme="red"
             wide
-            onClick={handleSubmit}
           >
             Добавить
           </MyButton>
